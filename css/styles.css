@@ -20,6 +20,8 @@ header {
     background-color: #2C514D;
     color: white;
     font-size: 20px;
+    border-bottom: 5px solid #c9a267;
+
 }
 .logo {
     display: flex;
