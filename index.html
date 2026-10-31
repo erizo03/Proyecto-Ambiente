@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Proyecto base</title>
+    <title>Café San Martin</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -17,24 +18,190 @@
                 <li><a href="html/Catalogo.html">Catálogo</a></li>
                 <li><a href="html/Carrito.html">Carrito de compras</a></li>
                 <li><a href="html/Cuenta.html">Mi cuenta</a></li>
-                <li><a href="html/Cuenta.html">Contacto</a></li>
+                <li><a href="html/Contacto.html">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="portada">
-            <h1>Café de Especialidad</h1>
-            <p>Detrás de cada taza de Café San Martín hay 
+        <section id="portada">
+            <h2><strong>Café de Especialidad</strong></h2>
+            <p>Detrás de cada taza de Café San Martín hay
                 una historia de amor por la tierra y el café.</p>
             <img src="images/imagen-portada.png" alt="Imagen de la pagina de inicio">
         </section>
-
+    
+        <section id="ofertas" class="seccion-alterna">
+            <h2 class="text-center mb-4"><strong>Ofertas y Promociones Vigentes</strong></h1>
+            <div id="carrusel-oferta" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="images/cafe-geisha-oferta.jpeg" class="img-fluid rounded-start"
+                                                alt="Oferta de cafe geisha">
+                                        </div>
+                                        <div class="col-md-8 d-flex align-items-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Geisha: 15% de descuento</h5>
+                                                <p class="card-text">Nuestro café más exclusivo, con notas florales y de
+                                                    jazmín y una acidez brillante.
+                                                    Disfruta un 15% de descuento en la bolsa de 340 g.</p>
+                                                <p class="card-text"><small class="text-muted">Válido hasta agotar
+                                                        existencias</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="images/cafe-catuai-oferta.jpeg" class="img-fluid rounded-start"
+                                                alt="Oferta de cafe catuai">
+                                        </div>
+                                        <div class="col-md-8 d-flex align-items-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title">2x1 en Catuaí</h5>
+                                                <p class="card-text">Dulce, balanceado y con notas a chocolate. El compañero
+                                                    perfecto para tus
+                                                    mañanas: compra una bolsa y la segunda va por nuestra cuenta</p>
+                                                <p class="card-text"><small class="text-muted">Solo sábados y
+                                                        domingos</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row g-4 justify-content-center">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="images/cafe-bourbon-oferta.jpeg" class="img-fluid rounded-start"
+                                                alt="Oferta de cafe bourbon">
+                                        </div>
+                                        <div class="col-md-8 d-flex align-items-center">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Bourbon: envío gratis</h5>
+                                                <p class="card-text">Un clásico de cuerpo redondo con notas a caramelo y
+                                                    frutos rojos. Llévate dos bolsas
+                                                    de Bourbon y te lo enviamos gratis a tu casa.</p>
+                                                <p class="card-text"><small class="text-muted">Envío gratis en compras de 2
+                                                        bolsas o más</small></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carrusel-oferta" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carrusel-oferta" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <section id="novedades">
+            <h2 class="text-center mb-4"><strong>Novedades</strong></h1>
+            <div class="row align-items-center g-5 justify-content-center">
+                <div class="col-md-3">
+                    <img src="images/cafe-bourbon-miel-oferta.jpeg" class="img-fluid
+                            alt=" Bolsa de café Bourbon Miel">
+                </div>
+    
+                <div class="col-md-5">
+                    <span class="etiqueta-nuevo">NUEVO</span>
+                    <h2 class="mt-3">Bourbon Miel</h2>
+                    <p class="subtitulo-novedad">Edición de tiempo limitado</p>
+    
+                    <p>Procesado con el método miel, que conserva parte de la pulpa del grano
+                        durante el secado y le da un dulzor natural único.</p>
+    
+                    <div class="notas mb-4">
+                        <span>Panela</span>
+                        <span>Durazno</span>
+                        <span>Miel de abeja</span>
+                    </div>
+    
+                    <a href="html/Catalogo.html" class="btn">Ver en el catálogo</a>
+                </div>
+            </div>
+        </section>
+    
+        <section id="recomendaciones" class="recomendaciones seccion-alterna">
+            <h2 class="text-center"><strong>Cómo preparar tu café</strong></h1>
+            <p class="text-center mb-5">Saca el máximo sabor a cada grano en casa</p>
+    
+            <div class="row g-4 justify-content-center">
+    
+                <div class="col-md-4">
+                    <div class="metodo h-100">
+                        <span class="nivel">Fácil</span>
+                        <h3 class="mt-3">Chorreador</h3>
+                        <p>El método tradicional de Costa Rica. Resalta los sabores dulces y deja una taza limpia.</p>
+                        <ul class="list-unstyled datos">
+                            <li><strong>Molienda:</strong> Media</li>
+                            <li><strong>Proporción:</strong> 15 g por cada 250 ml</li>
+                            <li><strong>Tiempo:</strong> 3 a 4 minutos</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="metodo h-100">
+                        <span class="nivel">Fácil</span>
+                        <h3 class="mt-3">Prensa francesa</h3>
+                        <p>Da una taza con más cuerpo, ideal para cafés con notas a chocolate como el Catuaí.</p>
+                        <ul class="list-unstyled datos">
+                            <li><strong>Molienda:</strong> Gruesa</li>
+                            <li><strong>Proporción:</strong> 17 g por cada 250 ml</li>
+                            <li><strong>Tiempo:</strong> 4 minutos</li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                    <div class="metodo h-100">
+                        <span class="nivel">Intermedio</span>
+                        <h3 class="mt-3">Espresso</h3>
+                        <p>Concentrado e intenso. La base para capuchinos y lattes.</p>
+                        <ul class="list-unstyled datos">
+                            <li><strong>Molienda:</strong> Fina</li>
+                            <li><strong>Proporción:</strong> 18 g para 36 ml</li>
+                            <li><strong>Tiempo:</strong> 25 a 30 segundos</li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div class="consejos mt-5">
+                <span>Agua entre 90 y 96 °C</span>
+                <span>Muele el café justo antes de prepararlo</span>
+                <span>Guárdalo en un frasco hermético</span>
+            </div>
+        </section>
+    
+    
     </main>
 
     <footer>
         <p>&copy; 2026 Café San Martin</p>
     </footer>
-    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
