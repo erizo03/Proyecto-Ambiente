@@ -470,3 +470,91 @@ footer {
 .tarjeta-contacto p {
     color: #5a3e2b;
 }
+
+
+
+/* redes sociales y contactos */
+
+
+.seccion-redes {
+    padding: 50px 20px;
+    background-color: #f5f0e6;
+}
+
+.seccion-redes h2 {
+    color: #2C514D;
+    margin-bottom: 20px;
+}
+
+.seccion-redes p {
+    color: #5a3e2b;
+    margin-bottom: 25px;
+}
+
+.tarjeta-contacto {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    height: 100%;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.tarjeta-contacto h3 {
+    color: #2C514D;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-contacto p {
+    color: #5a3e2b;
+    margin-bottom: 15px;
+}
+
+
+
+/*  preguntas frecuentes*/
+
+
+.seccion-faq {
+    padding: 50px 20px;
+    background-color: white;
+}
+
+.seccion-faq h2 {
+    color: #2C514D;
+    margin-bottom: 20px;
+}
+
+.seccion-faq p {
+    color: #5a3e2b;
+    margin-bottom: 25px;
+}
+
+.seccion-faq .accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.seccion-faq .accordion-button {
+    background-color: #f5f0e6;
+    color: #2C514D;
+    font-weight: bold;
+}
+
+.seccion-faq .accordion-button:hover {
+    background-color: #e7ddca;
+}
+
+.seccion-faq .accordion-button:not(.collapsed) {
+    background-color: #2C514D;
+    color: white;
+}
+
+.seccion-faq .accordion-body {
+    background-color: white;
+    color: #5a3e2b;
+    padding: 20px;
+}
