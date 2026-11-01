@@ -367,11 +367,75 @@ section {
     font-size: 15px;
 }
 
-/* pie de página  */
+
 
 footer {
     text-align: center;
     padding: 1rem;
     background-color: #2C514D;
     color: white;
+}
+
+
+/* contacto */
+
+.contenedor-contacto {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.seccion-nosotros h2,
+.seccion-alterna h2 {
+    color: #2C514D;
+    margin-bottom: 1.5rem;
+}
+
+.imagen-nosotros {
+    border-radius: 10px;
+}
+
+/* formulario */ 
+
+#formContacto {
+    max-width: 700px;
+}
+
+#formContacto .form-control {
+    border: 1px solid #b9b9b9;
+    padding: 0.7rem;
+}
+
+#resultadoContacto {
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+/* mensaje */
+
+.mensaje-error {
+    color: #a32121;
+}
+
+.mensaje-exito {
+    color: #25643c;
+}
+
+.nota-contacto {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #5a3e2b;
+}
+
+/* adaptacion a pantallas pequeñas*/
+
+@media (max-width: 800px) {
+    header {
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
 }
