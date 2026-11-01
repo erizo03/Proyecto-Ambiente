@@ -439,3 +439,34 @@ footer {
         gap: 0.75rem;
     }
 }
+
+/* redes y contactos */
+
+.seccion-redes {
+    padding: 50px 20px;
+    background-color: #f5f0e6;
+}
+
+.seccion-redes h2 {
+    color: #2C514D;
+    margin-bottom: 20px;
+}
+
+.tarjeta-contacto {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    height: 100%;
+    border: 1px solid #dddddd;
+    text-align: center;
+}
+
+.tarjeta-contacto h3 {
+    color: #2C514D;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.tarjeta-contacto p {
+    color: #5a3e2b;
+}
