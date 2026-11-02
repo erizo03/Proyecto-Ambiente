@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paquetes especiales | Café San Martín</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/encabezado.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="marca">
+            <img src="../images/logo-cafe-san-martin.png" alt="Logo de Café San Martín">
+            <span>Café San Martín</span>
+        </div>
+
+        <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="Catalogo.html" class="activo">Catálogo</a>
+            <a href="Carrito.html">Carrito de compras</a>
+            <a href="Cuenta.html">Mi cuenta</a>
+            <a href="Perfil.html">Mi perfil</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section class="titulo-galeria">
+
+            <h1>Paquetes especiales</h1>
+
+            <p>
+                Descubrí nuestras combinaciones de café, pensadas para
+                disfrutar diferentes sabores y compartir momentos especiales.
+            </p>
+
+            <a href="Catalogo.html" class="volver">
+                ← Volver al catálogo
+            </a>
+
+        </section>
+
+
+        <!-- PAQUETES -->
+        <section class="galeria-productos">
+
+
+            <!-- PAQUETE 1 -->
+            <article class="producto">
+
+                <img src="../img/cafe-clasico.png" alt="Paquete Esencial">
+
+                <div class="informacion-producto">
+
+                    <h2>Paquete Esencial</h2>
+
+                    <p class="descripcion">
+                        Una combinación ideal para quienes disfrutan
+                        los sabores tradicionales del café costarricense.
+                    </p>
+
+                    <div class="detalles">
+
+                        <p><strong>Incluye:</strong> Café Clásico y Café Reserva</p>
+
+                        <p><strong>Cantidad:</strong> 2 paquetes de 250 g</p>
+
+                        <p><strong>Ideal para:</strong> Disfrutar en casa</p>
+
+                    </div>
+
+                    <p class="precio">₡9.900</p>
+
+                    <button class="boton" onclick="mostrarPaquete('esencial')">
+                        Ver paquete
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PAQUETE 2 -->
+            <article class="producto">
+
+                <img src="../img/cafe-honey.png" alt="Paquete Experiencia">
+
+                <div class="informacion-producto">
+
+                    <h2>Paquete Experiencia</h2>
+
+                    <p class="descripcion">
+                        Una selección de variedades con notas dulces
+                        y frutales para descubrir nuevos sabores.
+                    </p>
+
+                    <div class="detalles">
+
+                        <p><strong>Incluye:</strong> Café Honey y Edición Especial</p>
+
+                        <p><strong>Cantidad:</strong> 2 paquetes de 250 g</p>
+
+                        <p><strong>Ideal para:</strong> Amantes de nuevos sabores</p>
+
+                    </div>
+
+                    <p class="precio">₡12.000</p>
+
+                    <button class="boton" onclick="mostrarPaquete('experiencia')">
+                        Ver paquete
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- PAQUETE 3 -->
+            <article class="producto">
+
+                <img src="../img/cafe-organico.png" alt="Paquete Degustación">
+
+                <div class="informacion-producto">
+
+                    <h2>Paquete Degustación</h2>
+
+                    <p class="descripcion">
+                        Una combinación de diferentes variedades para
+                        explorar distintos perfiles y aromas del café.
+                    </p>
+
+                    <div class="detalles">
+
+                        <p><strong>Incluye:</strong> Café Clásico, Honey y Reserva</p>
+
+                        <p><strong>Cantidad:</strong> 3 paquetes de 250 g</p>
+
+                        <p><strong>Ideal para:</strong> Compartir y regalar</p>
+
+                    </div>
+
+                    <p class="precio">₡15.000</p>
+
+                    <button class="boton" onclick="mostrarPaquete('degustacion')">
+                        Ver paquete
+                    </button>
+
+                </div>
+
+            </article>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- VENTANA EMERGENTE -->
+    <div id="modalPaquete" class="modal-producto">
+
+        <div class="contenido-modal">
+
+            <button class="cerrar-modal" onclick="cerrarPaquete()" aria-label="Cerrar">
+                &times;
+            </button>
+
+            <div class="detalle-modal">
+
+                <div class="imagen-modal">
+                    <img id="imagenPaquete" src="" alt="Imagen del paquete">
+                </div>
+
+                <div class="texto-modal">
+
+                    <h2 id="nombrePaquete"></h2>
+
+                    <p id="descripcionPaquete" class="descripcion-modal"></p>
+
+                    <div class="detalles-modal">
+
+                        <p>
+                            <strong>Incluye:</strong>
+                            <span id="incluyePaquete"></span>
+                        </p>
+
+                        <p>
+                            <strong>Cantidad:</strong>
+                            <span id="cantidadPaquete"></span>
+                        </p>
+
+                        <p>
+                            <strong>Ideal para:</strong>
+                            <span id="idealPaquete"></span>
+                        </p>
+
+                    </div>
+
+                    <p id="precioPaquete" class="precio"></p>
+
+                    <button class="boton cerrar-detalle" onclick="cerrarPaquete()">
+                        Volver a los paquetes
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+
+        <p>© 2026 Café San Martín | Todos los derechos reservados</p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Información de los paquetes
+        const paquetes = {
+
+            esencial: {
+                nombre: "Paquete Esencial",
+                imagen: "../img/cafe-clasico.png",
+                descripcion: "Una combinación ideal para quienes disfrutan los sabores tradicionales del café costarricense.",
+                incluye: "Café Clásico y Café Reserva",
+                cantidad: "2 paquetes de 250 g",
+                ideal: "Disfrutar en casa",
+                precio: "₡9.900"
+            },
+
+            experiencia: {
+                nombre: "Paquete Experiencia",
+                imagen: "../img/cafe-honey.png",
+                descripcion: "Una selección de variedades con notas dulces y frutales para descubrir nuevos sabores.",
+                incluye: "Café Honey y Edición Especial",
+                cantidad: "2 paquetes de 250 g",
+                ideal: "Amantes de nuevos sabores",
+                precio: "₡12.000"
+            },
+
+            degustacion: {
+                nombre: "Paquete Degustación",
+                imagen: "../img/cafe-organico.png",
+                descripcion: "Una combinación de diferentes variedades para explorar distintos perfiles y aromas del café.",
+                incluye: "Café Clásico, Honey y Reserva",
+                cantidad: "3 paquetes de 250 g",
+                ideal: "Compartir y regalar",
+                precio: "₡15.000"
+            }
+
+        };
+
+
+        // Mostrar detalles del paquete
+        function mostrarPaquete(tipo) {
+
+            const paquete = paquetes[tipo];
+
+            if (!paquete) {
+                return;
+            }
+
+            document.getElementById("imagenPaquete").src = paquete.imagen;
+
+            document.getElementById("imagenPaquete").alt = paquete.nombre;
+
+            document.getElementById("nombrePaquete").textContent = paquete.nombre;
+
+            document.getElementById("descripcionPaquete").textContent = paquete.descripcion;
+
+            document.getElementById("incluyePaquete").textContent = paquete.incluye;
+
+            document.getElementById("cantidadPaquete").textContent = paquete.cantidad;
+
+            document.getElementById("idealPaquete").textContent = paquete.ideal;
+
+            document.getElementById("precioPaquete").textContent = paquete.precio;
+
+            document.getElementById("modalPaquete").classList.add("abierto");
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        // Cerrar ventana
+        function cerrarPaquete() {
+
+            document.getElementById("modalPaquete").classList.remove("abierto");
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        // Cerrar al hacer clic fuera de la ventana
+        document.getElementById("modalPaquete").addEventListener("click", function(event) {
+
+            if (event.target === this) {
+                cerrarPaquete();
+            }
+
+        });
+
+
+        // Cerrar al presionar ESC
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                cerrarPaquete();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>

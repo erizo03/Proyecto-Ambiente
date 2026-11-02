@@ -2,163 +2,110 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Catálogo</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo | Café San Martín</title>
+
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/encabezado.css">
 </head>
 <body>
-    <header>    
-       <div class="logo">
-            <img src="../images/logo-cafe-san-martin.png" alt="Logo de la empresa">
-            Café San Martín
-       </div>
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="Catalogo.html">Catálogo</a></li>
-                <li><a href="Carrito.html">Carrito de compras</a></li>
-                <li><a href="Cuenta.html">Mi cuenta</a></li>
-                <li><a href="html/Perfil.html">Mi perfil</a></li>
-                <li><a href="Contacto.html">Contacto</a></li>
-            </ul>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="marca">
+            <img src="../images/logo-cafe-san-martin.png" alt="Logo de Café San Martín">
+            <span>Café San Martín</span>
+        </div>
+
+        <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="Catalogo.html" class="activo">Catálogo</a>
+            <a href="Carrito.html">Carrito de compras</a>
+            <a href="Cuenta.html">Mi cuenta</a>
+            <a href="Perfil.html">Mi perfil</a>
+            <a href="Contacto.html">Contacto</a>
         </nav>
     </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
-        <section class="titulo">
+
+        <section class="presentacion">
             <h1>Nuestro Catálogo</h1>
-            <p>Descubre los cafés de altura de Café San Martín, cultivados en Tarrazú, Costa Rica.</p>
 
-            <div class="filtros">
-                <input type="text" id="buscador" placeholder="Buscar café por nombre...">
-                <select id="filtro-tipo">
-                    <option value="todos">Origen: Todos</option>
-                    <option value="tarrazu">Tarrazú</option>
-                    <option value="valle-central">Valle Central</option>
-                    <option value="los-santos">Los Santos</option>
-                </select>
-                <select id="filtro-tueste">
-                    <option value="todos">Tueste: Todos</option>
-                    <option value="claro">Claro</option>
-                    <option value="medio">Medio</option>
-                    <option value="oscuro">Oscuro</option>
-                </select>
-                <button id="limpiar-filtros" class="btn btn-secundario btn-small" type="button">Limpiar</button>
+            <p>
+                Descubrí nuestros cafés de especialidad,
+                cultivados con dedicación en las tierras
+                de Tarrazú, Costa Rica.
+            </p>
+        </section>
+
+        <section class="categorias">
+
+            <h2>Descubrí nuestros productos</h2>
+
+            <div class="contenedor-categorias">
+
+                <article class="tarjeta">
+                    <div class="imagen-categoria">
+                        <img src="../img/cafe-clasico.png" alt="Café clásico">
+                    </div>
+
+                    <h3>Galería de productos</h3>
+
+                    <p>
+                        Conocé nuestros diferentes tipos de café,
+                        sus características y presentaciones.
+                    </p>
+
+                    <a href="galeria.html" class="boton">
+                        Ver productos
+                    </a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="imagen-categoria">
+                        <img src="../img/cafe-reserva.png" alt="Café reserva">
+                    </div>
+
+                    <h3>Colecciones de café</h3>
+
+                    <p>
+                        Explorá las diferentes colecciones
+                        y variedades disponibles.
+                    </p>
+
+                    <a href="colecciones.html" class="boton">
+                        Ver colecciones
+                    </a>
+                </article>
+
+                <article class="tarjeta">
+                    <div class="imagen-categoria">
+                        <img src="../img/Paquetes.png" alt="Paquetes">
+                    </div>
+
+                    <h3>Paquetes especiales</h3>
+
+                    <p>
+                        Descubrí nuestras opciones de paquetes
+                        y combinaciones de café.
+                    </p>
+
+                    <a href="paquetes.html" class="boton">
+                        Ver paquetes
+                    </a>
+                </article>
+
             </div>
         </section>
 
-        <section id="galería">
-            <h2 class="titulo-seccion">Galería de Productos</h2>
-            <p class="subtitulo-seccion">Filtra por origen o tueste, o usa el buscador para encontrar tu café ideal.</p>
-            
-            <div class="grid-3" id="productGrid">
-
-                <div class="product-item" data-nombre="café catauí" data-origen="tarrazu" data-tueste="medio">
-                    <div class="tarjeta">
-                        <img src="../images/cafe-catuai.jpeg" alt="Café Catauí">
-                        <div class="contenido">
-                            <span class="etiqueta">Tarrazú - Medio</span>
-                            <strong>Café Catauí 1kg</strong>
-                            <p>Notas a caramelo y frutos rojos.</p>
-                            <div class="fila-precio">
-                                <span class="precio">₡7.200</span>
-                                <button class="btn btn-small btn-carrito">Agregar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item" data-nombre="café bourbon" data-origen="valle-central" data-tueste="oscuro">
-                    <div class="tarjeta">
-                        <img src="../images/cafe-bourbon.jpeg" alt="Café Bourbon">
-                        <div class="contenido">
-                            <span class="etiqueta">Valle Central - Oscuro</span>
-                            <strong>Café Bourbon 500g</strong>
-                            <p>Cuerpo intenso, notas achocolatadas.</p>
-                            <div class="fila-precio">
-                                <span class="precio">₡6.200</span>
-                                <button class="btn btn-small btn-carrito">Agregar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="product-item" data-nombre="café geisha" data-origen="los-santos" data-tueste="claro">
-                    <div class="tarjeta">
-                        <img src="../images/cafe-geisha.jpeg" alt="Café Geisha">
-                        <div class="contenido">
-                            <span class="etiqueta">Los Santos - Claro</span>
-                            <strong>Café Geisha 340</strong>
-                            <p>Perfil de especialidad, jazmín y bergamota.</p>
-                            <div class="fila-precio">
-                                <span class="precio">₡9.900</span>
-                                <button class="btn btn-small btn-carrito">Agregar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <p class="sin-resultados" id="noResults">No encontramos cafés con estos filtros. Intenta con otra combinación.</p>
-        </section>
-
-        <section id="colecciones" class="seccion-alterna">
-            <h2 class="titulo-seccion">Colecciones de café.</h2>
-            <p class="subtitulo-seccion">Explora nuestros cafés agrupados por origen y temporada.</p>
-
-            <div class="grid-3">
-                <a href="#galería" class="coleccion filtro-rapido" data-origen="tarrazu">
-                    <div class="icono">⛰︎</div>
-                       <strong>Colección Tarrazú</strong>
-                       <p>Nuestra línea insignia, cultivada en las montañas más altas.</p>
-               </a>
-                <a href="#galería" class="coleccion filtro-rapido" data-origen="valle-central">
-                   <div class="icono">⚛︎</div>
-                       <strong>Colección Valle Central</strong>
-                       <p>Cafés balanceados de fincas familiares aliadas.</p>
-               </a>
-                <a href="#galería" class="coleccion filtro-rapido" data-origen="los-santos">
-                   <div class="icono">⚜︎</div>
-                       <strong>Edición Limitada Los Santos</strong>
-                       <p>Micro-lotes de especialidad en cantidades reducidas.</p>
-               </a>
-            </div>
-        </section>
-
-        <section id="paquetes">
-            <h2 class="titulo-seccion">Paquetes especiales.</h2>
-            <p class="subtitulo-seccion">Combos pensados para regalar o abastecer tu oficina.</p>
-
-            <div class="grid-2">
-                <div class="paquete">
-                    <img src="../images/paquete-oficina.jpeg" alt="Paquete Oficina">
-                    <div class="contenido">
-                        <strong>Paquete Oficina</strong>
-                        <p>Café molido 2kg + 100 filtros de papel. Ideal para equipos de trabajo.</p>
-                        <div class="fila-precio">
-                            <span class="precio">₡14.900</span>
-                            <button class="btn btn-small btn-carrito">Agregar</button>
-
-                    </div>
-                </div>
-                </div>
-                <div class="paquete">
-                    <img src="../images/paquete-degustacion.jpeg" alt="Paquete Degustación">
-                    <div class="contenido">
-                        <strong>Paquete Degustación</strong>
-                        <p>Incluye 3 bolsas de 250g: Catuaí, Bourbon y Geisha, para comparar perfiles.</p>
-                        <div class="fila-precio">
-                            <span class="precio">₡8.500</span>
-                            <button class="btn btn-small btn-carrito">Agregar</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Café San Martin</p>
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>© 2026 Café San Martín | Todos los derechos reservados</p>
     </footer>
-    
+
 </body>
 </html>

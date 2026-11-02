@@ -1,0 +1,72 @@
+/* =================================
+   ENCABEZADO COMPARTIDO
+   Se carga en todas las páginas, después de su hoja de estilos
+================================= */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem 2rem;
+    padding: 1rem 2rem;
+    background-color: #2C514D;
+    border-bottom: 5px solid #c9a267;
+    color: white;
+    font-family: Georgia, 'Times New Roman', serif;
+    line-height: 1.5;
+}
+
+/* LOGO Y NOMBRE */
+
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.marca img {
+    display: block;
+    height: 60px;
+    width: auto;
+    box-shadow: 7px 7px 12px 0 rgba(20, 20, 20, 0.3);
+}
+
+/* MENÚ */
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 1.5rem;
+}
+
+.menu a {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.menu a:hover,
+.menu a.activo {
+    border-bottom-color: #c9a267;
+    color: #f6d9b3;
+}
+
+/* ADAPTACIÓN A PANTALLAS PEQUEÑAS */
+
+@media (max-width: 900px) {
+    .encabezado {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .menu {
+        justify-content: center;
+    }
+}

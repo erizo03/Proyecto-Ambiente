@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de productos | Café San Martín</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../css/encabezado.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="marca">
+            <img src="../images/logo-cafe-san-martin.png" alt="Logo de Café San Martín">
+            <span>Café San Martín</span>
+        </div>
+
+        <nav class="menu">
+            <a href="../index.html">Inicio</a>
+            <a href="Catalogo.html" class="activo">Catálogo</a>
+            <a href="Carrito.html">Carrito de compras</a>
+            <a href="Cuenta.html">Mi cuenta</a>
+            <a href="Perfil.html">Mi perfil</a>
+            <a href="Contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <!-- PRESENTACIÓN -->
+        <section class="titulo-galeria">
+
+            <h1>Nuestros cafés de especialidad</h1>
+
+            <p>
+                Descubrí nuestra variedad de cafés, cultivados con dedicación
+                en las tierras de Tarrazú, Costa Rica.
+            </p>
+
+            <a href="Catalogo.html" class="volver">
+                ← Volver al catálogo
+            </a>
+
+        </section>
+
+
+        <!-- GALERÍA DE PRODUCTOS -->
+        <section class="galeria-productos">
+
+
+            <!-- CAFÉ CLÁSICO -->
+            <article class="producto">
+
+                <img src="../img/cafe-clasico.png" alt="Café Clásico">
+
+                <div class="informacion-producto">
+
+                    <h2>Café Clásico</h2>
+
+                    <p class="descripcion">
+                        Una propuesta equilibrada y aromática que resalta
+                        el sabor tradicional del café de Tarrazú.
+                    </p>
+
+                    <div class="detalles">
+                        <p><strong>Origen:</strong> Tarrazú, Costa Rica</p>
+                        <p><strong>Tueste:</strong> Medio</p>
+                        <p><strong>Notas de cata:</strong> Chocolate, caramelo y nueces</p>
+                        <p><strong>Presentación:</strong> 250 g</p>
+                    </div>
+
+                    <p class="precio">₡4.500</p>
+
+                    <button class="boton" onclick="mostrarProducto('clasico')">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAFÉ RESERVA -->
+            <article class="producto">
+
+                <img src="../img/cafe-reserva.png" alt="Café Reserva">
+
+                <div class="informacion-producto">
+
+                    <h2>Café Reserva</h2>
+
+                    <p class="descripcion">
+                        Una variedad especial con carácter intenso,
+                        ideal para quienes disfrutan sabores profundos.
+                    </p>
+
+                    <div class="detalles">
+                        <p><strong>Origen:</strong> Tarrazú, Costa Rica</p>
+                        <p><strong>Tueste:</strong> Oscuro</p>
+                        <p><strong>Notas de cata:</strong> Cítricos, frutos rojos y cacao</p>
+                        <p><strong>Presentación:</strong> 250 g</p>
+                    </div>
+
+                    <p class="precio">₡6.500</p>
+
+                    <button class="boton" onclick="mostrarProducto('reserva')">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAFÉ HONEY -->
+            <article class="producto">
+
+                <img src="../img/cafe-honey.png" alt="Café Honey">
+
+                <div class="informacion-producto">
+
+                    <h2>Café Honey</h2>
+
+                    <p class="descripcion">
+                        Un café dulce y complejo, con notas naturales
+                        que resaltan su proceso de beneficiado.
+                    </p>
+
+                    <div class="detalles">
+                        <p><strong>Origen:</strong> Tarrazú, Costa Rica</p>
+                        <p><strong>Tueste:</strong> Medio</p>
+                        <p><strong>Notas de cata:</strong> Miel, frutas tropicales y vainilla</p>
+                        <p><strong>Presentación:</strong> 250 g</p>
+                    </div>
+
+                    <p class="precio">₡6.000</p>
+
+                    <button class="boton" onclick="mostrarProducto('honey')">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAFÉ ORGÁNICO -->
+            <article class="producto">
+
+                <img src="../img/cafe-organico.png" alt="Café Orgánico">
+
+                <div class="informacion-producto">
+
+                    <h2>Café Orgánico</h2>
+
+                    <p class="descripcion">
+                        Una alternativa de café con un perfil suave,
+                        inspirada en el cultivo sostenible.
+                    </p>
+
+                    <div class="detalles">
+                        <p><strong>Origen:</strong> Tarrazú, Costa Rica</p>
+                        <p><strong>Tueste:</strong> Medio</p>
+                        <p><strong>Notas de cata:</strong> Frutas secas y chocolate</p>
+                        <p><strong>Presentación:</strong> 250 g</p>
+                    </div>
+
+                    <p class="precio">₡5.500</p>
+
+                    <button class="boton" onclick="mostrarProducto('organico')">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- CAFÉ EDICIÓN ESPECIAL -->
+            <article class="producto">
+
+                <img src="../img/cafe-especial.png" alt="Café Edición Especial">
+
+                <div class="informacion-producto">
+
+                    <h2>Café Edición Especial</h2>
+
+                    <p class="descripcion">
+                        Una experiencia diferente con notas florales
+                        y frutales para quienes buscan nuevos sabores.
+                    </p>
+
+                    <div class="detalles">
+                        <p><strong>Origen:</strong> Tarrazú, Costa Rica</p>
+                        <p><strong>Tueste:</strong> Medio</p>
+                        <p><strong>Notas de cata:</strong> Frutas tropicales, flores y caramelo</p>
+                        <p><strong>Presentación:</strong> 250 g</p>
+                    </div>
+
+                    <p class="precio">₡7.500</p>
+
+                    <button class="boton" onclick="mostrarProducto('especial')">
+                        Ver producto
+                    </button>
+
+                </div>
+
+            </article>
+
+        </section>
+
+    </main>
+
+
+    <!-- VENTANA EMERGENTE -->
+    <div id="modalProducto" class="modal-producto">
+
+        <div class="contenido-modal">
+
+            <button class="cerrar-modal" onclick="cerrarProducto()" aria-label="Cerrar">
+                &times;
+            </button>
+
+            <div class="detalle-modal">
+
+                <div class="imagen-modal">
+                    <img id="imagenDetalle" src="" alt="Imagen del producto">
+                </div>
+
+                <div class="texto-modal">
+
+                    <h2 id="nombreDetalle"></h2>
+
+                    <p id="descripcionDetalle" class="descripcion-modal"></p>
+
+                    <div class="detalles-modal">
+
+                        <p>
+                            <strong>Origen:</strong>
+                            <span id="origenDetalle"></span>
+                        </p>
+
+                        <p>
+                            <strong>Tueste:</strong>
+                            <span id="tuesteDetalle"></span>
+                        </p>
+
+                        <p>
+                            <strong>Notas de cata:</strong>
+                            <span id="notasDetalle"></span>
+                        </p>
+
+                        <p>
+                            <strong>Presentación:</strong>
+                            <span id="presentacionDetalle"></span>
+                        </p>
+
+                    </div>
+
+                    <p id="precioDetalle" class="precio"></p>
+
+                    <button class="boton cerrar-detalle" onclick="cerrarProducto()">
+                        Volver al catálogo
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="pie-pagina">
+        <p>© 2026 Café San Martín | Todos los derechos reservados</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        // Información de los productos
+        const productos = {
+
+            clasico: {
+                nombre: "Café Clásico",
+                imagen: "../img/cafe-clasico.png",
+                descripcion: "Una propuesta equilibrada y aromática que resalta el sabor tradicional del café de Tarrazú.",
+                origen: "Tarrazú, Costa Rica",
+                tueste: "Medio",
+                notas: "Chocolate, caramelo y nueces",
+                precio: "₡4.500",
+                presentacion: "250 g"
+            },
+
+            reserva: {
+                nombre: "Café Reserva",
+                imagen: "../img/cafe-reserva.png",
+                descripcion: "Una variedad especial con carácter intenso, ideal para quienes disfrutan sabores profundos.",
+                origen: "Tarrazú, Costa Rica",
+                tueste: "Oscuro",
+                notas: "Cítricos, frutos rojos y cacao",
+                precio: "₡6.500",
+                presentacion: "250 g"
+            },
+
+            honey: {
+                nombre: "Café Honey",
+                imagen: "../img/cafe-honey.png",
+                descripcion: "Un café dulce y complejo, con notas naturales que resaltan su proceso de beneficiado.",
+                origen: "Tarrazú, Costa Rica",
+                tueste: "Medio",
+                notas: "Miel, frutas tropicales y vainilla",
+                precio: "₡6.000",
+                presentacion: "250 g"
+            },
+
+            organico: {
+                nombre: "Café Orgánico",
+                imagen: "../img/cafe-organico.png",
+                descripcion: "Una alternativa de café con un perfil suave, inspirada en el cultivo sostenible.",
+                origen: "Tarrazú, Costa Rica",
+                tueste: "Medio",
+                notas: "Frutas secas y chocolate",
+                precio: "₡5.500",
+                presentacion: "250 g"
+            },
+
+            especial: {
+                nombre: "Café Edición Especial",
+                imagen: "../img/cafe-especial.png",
+                descripcion: "Una experiencia diferente con notas florales y frutales para quienes buscan nuevos sabores.",
+                origen: "Tarrazú, Costa Rica",
+                tueste: "Medio",
+                notas: "Frutas tropicales, flores y caramelo",
+                precio: "₡7.500",
+                presentacion: "250 g"
+            }
+
+        };
+
+
+        // Abrir ventana con la información del producto
+        function mostrarProducto(tipo) {
+
+            const producto = productos[tipo];
+
+            if (!producto) {
+                return;
+            }
+
+            document.getElementById("imagenDetalle").src = producto.imagen;
+            document.getElementById("imagenDetalle").alt = producto.nombre;
+
+            document.getElementById("nombreDetalle").textContent = producto.nombre;
+            document.getElementById("descripcionDetalle").textContent = producto.descripcion;
+            document.getElementById("origenDetalle").textContent = producto.origen;
+            document.getElementById("tuesteDetalle").textContent = producto.tueste;
+            document.getElementById("notasDetalle").textContent = producto.notas;
+            document.getElementById("presentacionDetalle").textContent = producto.presentacion;
+            document.getElementById("precioDetalle").textContent = producto.precio;
+
+            document.getElementById("modalProducto").classList.add("abierto");
+
+            document.body.style.overflow = "hidden";
+        }
+
+
+        // Cerrar ventana
+        function cerrarProducto() {
+
+            document.getElementById("modalProducto").classList.remove("abierto");
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        // Cerrar al hacer clic fuera de la ventana
+        document.getElementById("modalProducto").addEventListener("click", function(event) {
+
+            if (event.target === this) {
+                cerrarProducto();
+            }
+
+        });
+
+
+        // Cerrar al presionar ESC
+        document.addEventListener("keydown", function(event) {
+
+            if (event.key === "Escape") {
+                cerrarProducto();
+            }
+
+        });
+
+    </script>
+
+</body>
+</html>
