@@ -2,13 +2,15 @@ const botonesAgregar = document.querySelectorAll(".agregar");
 
 botonesAgregar.forEach(function(boton) {
 
+    const textoBoton = boton.textContent;
+
     boton.addEventListener("click", function() {
 
-        const ventana = boton.closest(".detalle-modal");
+        const ventana = boton.closest(".detalle-modal, .producto");
         const nombre = ventana.querySelector("h2").textContent;
         const precioTexto = ventana.querySelector(".precio").textContent;  
         const precio = parseInt(precioTexto.replace("₡", "").replaceAll(".", ""));   
-        const imagen = ventana.querySelector(".imagen-modal img").getAttribute("src");
+        const imagen = ventana.querySelector("img").getAttribute("src");
 
         let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
         let productoExistente = null;
@@ -39,7 +41,7 @@ botonesAgregar.forEach(function(boton) {
 
         boton.textContent = "¡Agregado!";
         setTimeout(function() {
-            boton.textContent = "Agregar";
+            boton.textContent = textoBoton;
         }, 1200);
     });
 
