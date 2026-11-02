@@ -249,6 +249,12 @@ section {
     transition: transform 0.2s ease;
 }
 
+#carrusel-oferta .card img {
+    width: 100%;
+    aspect-ratio: 3 / 4;     /* todas: 3 de ancho por 4 de alto */
+    object-fit: cover;       /* recorta lo que sobra, sin deformar */
+}
+
 #carrusel-oferta .card:hover {
     transform: translateY(-3px);
 }
