@@ -6,6 +6,7 @@
     <title>Carrito de compras | Café San Martín</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/carrito.css">
     <link rel="stylesheet" href="../css/encabezado.css">
 </head>
 <body>
@@ -27,6 +28,266 @@
     </header>
 
     <main>
+        <section class="titulo">
+            <h1>Carrito de compras</h1>
+            <p>
+                Revisa tus productos, elige cómo recibirlos
+                y finaliza tu pedido.
+            </p>
+        </section>
+
+        <section class="seccion-alterna">
+
+            <div class="contenedor-carrito">
+
+                <div id="carritoVacio" class="carrito-vacio oculto">
+                    <h2>Tu carrito está vacío</h2>
+                    <p>Agrega alguno de nuestros cafés desde el catálogo.</p>
+                    <a href="Catalogo.html" class="btn">Ir al catálogo</a>
+                </div>
+
+                <form id="formCompra" class="row g-4" novalidate>
+
+                    <div class="col-lg-8">
+
+                        <div class="seccion-compra">
+
+                            <h2><span class="paso">1</span> Tu carrito</h2>
+
+                            <div id="listaCarrito"></div>
+
+                        </div>
+
+                        <div class="seccion-compra">
+
+                            <h2><span class="paso">2</span> Entrega</h2>
+
+                            <div class="opciones">
+
+                                <label class="opcion">
+                                    <input type="radio" name="entrega" value="domicilio" checked>
+                                    <span>
+                                        <strong>Envío a domicilio</strong><br>
+                                        <small>GAM ₡2.000 · Resto del país ₡3.500</small>
+                                    </span>
+                                </label>
+
+                                <label class="opcion">
+                                    <input type="radio" name="entrega" value="retiro">
+                                    <span>
+                                        <strong>Retiro en Tarrazú</strong><br>
+                                        <small>Sin costo</small>
+                                    </span>
+                                </label>
+
+                            </div>
+
+                            <p class="nota-envio">
+                                Envío gratis en compras desde ₡25.000.
+                            </p>
+
+                            <div class="row g-3">
+
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre completo</label>
+                                    <input type="text" class="form-control" id="nombre">
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="text" class="form-control" id="telefono"
+                                           placeholder="8888 8888" maxlength="13">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="correo" class="form-label">Correo electrónico</label>
+                                    <input type="email" class="form-control" id="correo">
+                                </div>
+
+                            </div>
+
+                            <div id="datosDomicilio" class="row g-3 mt-1">
+
+                                <div class="col-md-6">
+                                    <label for="provincia" class="form-label">Provincia</label>
+                                    <select class="form-select" id="provincia">
+                                        <option value="">Seleccione una provincia</option>
+                                        <option value="san-jose">San José</option>
+                                        <option value="alajuela">Alajuela</option>
+                                        <option value="cartago">Cartago</option>
+                                        <option value="heredia">Heredia</option>
+                                        <option value="guanacaste">Guanacaste</option>
+                                        <option value="puntarenas">Puntarenas</option>
+                                        <option value="limon">Limón</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="canton" class="form-label">Cantón</label>
+                                    <input type="text" class="form-control" id="canton">
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="direccion" class="form-label">Dirección exacta</label>
+                                    <textarea class="form-control" id="direccion" rows="3"
+                                              placeholder="Ej: 200m norte de la iglesia, casa blanca"></textarea>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="seccion-compra">
+
+                            <h2><span class="paso">3</span> Método de pago</h2>
+
+                            <div class="opciones">
+
+                                <label class="opcion">
+                                    <input type="radio" name="pago" value="sinpe" checked>
+                                    <span>
+                                        <strong>SINPE Móvil</strong><br>
+                                        <small>Desde tu celular</small>
+                                    </span>
+                                </label>
+
+                                <label class="opcion">
+                                    <input type="radio" name="pago" value="tarjeta">
+                                    <span>
+                                        <strong>Tarjeta</strong><br>
+                                        <small>Crédito o débito</small>
+                                    </span>
+                                </label>
+
+                                <label class="opcion">
+                                    <input type="radio" name="pago" value="efectivo">
+                                    <span>
+                                        <strong>Efectivo</strong><br>
+                                        <small>Al recibir o retirar</small>
+                                    </span>
+                                </label>
+
+                            </div>
+
+                            <div id="info-sinpe" class="info-pago">
+                                Al confirmar, te enviaremos por WhatsApp el número
+                                SINPE Móvil y el monto a pagar. Tu pedido se despacha
+                                cuando recibamos el comprobante.
+                            </div>
+
+                            <div id="info-tarjeta" class="info-pago oculto">
+
+                                <div class="row g-3">
+
+                                    <div class="col-12">
+                                        <label for="titular" class="form-label">Nombre en la tarjeta</label>
+                                        <input type="text" class="form-control" id="titular">
+                                    </div>
+
+                                    <div class="col-12">
+                                        <label for="numeroTarjeta" class="form-label">Número de tarjeta</label>
+                                        <input type="text" class="form-control" id="numeroTarjeta"
+                                               placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label for="vencimiento" class="form-label">Vencimiento</label>
+                                        <input type="text" class="form-control" id="vencimiento"
+                                               placeholder="MM/AA" maxlength="5">
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label for="cvv" class="form-label">CVV</label>
+                                        <input type="password" class="form-control" id="cvv"
+                                               placeholder="123" maxlength="3">
+                                    </div>
+
+                                </div>
+
+                                <p class="nota-demo">
+                                    Demostración: los datos de la tarjeta no se guardan ni se envían.
+                                </p>
+
+                            </div>
+
+                            <div id="info-efectivo" class="info-pago oculto">
+                                Pagas en efectivo cuando recibes o retiras tu pedido.
+                                Si es posible, ten el monto exacto.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-4">
+
+                        <div class="resumen-pedido">
+
+                            <h2>Resumen</h2>
+
+                            <div class="fila-resumen">
+                                <span>Subtotal</span>
+                                <span id="resumenSubtotal">₡0</span>
+                            </div>
+
+                            <div class="fila-resumen">
+                                <span>Envío</span>
+                                <span id="resumenEnvio">₡0</span>
+                            </div>
+
+                            <div class="fila-resumen total-resumen">
+                                <span>Total</span>
+                                <span id="resumenTotal">₡0</span>
+                            </div>
+
+                            <button type="submit" class="btn w-100 mt-3">
+                                Confirmar pedido
+                            </button>
+
+                            <p id="resultadoCompra"></p>
+
+                            <a href="Catalogo.html" class="seguir-comprando">
+                                ← Seguir comprando
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+                <div id="confirmacion" class="confirmacion oculto">
+
+                    <div class="icono-check">✓</div>
+
+                    <h2>¡Gracias por tu compra!</h2>
+
+                    <p>Tu pedido fue registrado correctamente.</p>
+
+                    <p class="numero-pedido">
+                        Pedido <strong id="confNumero"></strong>
+                    </p>
+
+                    <div id="detalleConfirmacion" class="detalle-confirmacion"></div>
+
+                    <div class="mt-4 d-flex gap-2 justify-content-center flex-wrap">
+                        <a href="Catalogo.html" class="btn">Seguir comprando</a>
+                        <a href="../index.html" class="btn btn-secundario">Volver al inicio</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
     </main>
+
+    <footer>
+        <p>&copy; 2026 Café San Martin</p>
+    </footer>
+
+    <script src="../js/carrito.js"></script>
+
 </body>
 </html>

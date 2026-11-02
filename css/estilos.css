@@ -111,6 +111,17 @@ body {
 }
 
 
+/* BOTÓN AGREGAR AL CARRITO */
+.agregar {
+    border: none;
+    cursor: pointer;
+    margin-top: 18px;
+}
+
+.agregar:hover {
+    background-color: #c9a267;
+}
+
 /* =================================
    PUNTO 2.1 - GALERÍA DE PRODUCTOS
 ================================= */
